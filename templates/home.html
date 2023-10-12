@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Card Validator</title>
+    <style>
+        body {
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Text color */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Vertical centering */
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        form {
+            background-color: #444; /* Dark form background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555; /* Input background color */
+            color: #fff; /* Input text color */
+        }
+
+        button {
+            background-color: #007bff; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Hover color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bank Card Validator</h1>
+    </header>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="cname">Card Number</label>
+            <input type="text" class="form-control" name="cname" placeholder="Enter Card Number">
+        </div>
+        <div class="form-group">
+            <label for="ex">Expire Date</label>
+            <input type="text" class="form-control" name="ex" placeholder="Enter Expire Date">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <h1>Card Type: {{ cname }}</h1>
+    <h1>Valid Card: {{ ex }}</h1>
+</body>
+</html>
