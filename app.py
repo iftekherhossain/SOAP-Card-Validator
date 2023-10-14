@@ -58,4 +58,4 @@ async def post_card(request: Request, cname: str = Form(""), ex: str = Form(""))
     return templates.TemplateResponse("home.html", {"request": request, "cname": type_, "ex": res_valid.group(1)})
 
 if __name__ == '__main__':
-    uvicorn.run("app:app",reload=True, port=5000, host="127.0.0.3")
+    uvicorn.run("app:app",reload=True, port=5000, host="0.0.0.0")
